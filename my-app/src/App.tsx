@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     const checkBackend = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/ask", {
+        const res = await fetch("https://chatbot-ra89.onrender.com/api/ask", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ prompt: "ping" }),
@@ -57,7 +57,7 @@ function App() {
     setPrompt("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/ask", {
+      const res = await fetch("https://chatbot-ra89.onrender.com/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: userMessage.text }),
